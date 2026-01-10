@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DiabetesFit - Your Swiss-Designed Diabetes Management Companion">
+    <title>DiabetesFit - Swiss Diabetes Management App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 24px;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #4a90e2;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .coming-soon {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 18px;
+            border: 2px solid white;
+        }
+        
+        .features {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #4a90e2;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .swiss-badge {
+            background: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+        
+        .languages {
+            padding: 60px 20px;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .languages h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #4a90e2;
+        }
+        
+        .language-list {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            margin: 0 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 36px;
+            }
+            
+            .tagline {
+                font-size: 20px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">DiabetesFit</div>
+            <div class="tagline">Your Swiss-Designed Diabetes Management Companion</div>
+            <div class="subtitle">Precision tracking with interactive education for confident diabetes management</div>
+            <div class="swiss-badge">🇨🇭 Made in Switzerland</div>
+            <br><br>
+            <!-- Replace with actual App Store link once live -->
+            <span class="coming-soon">Coming Soon to App Store</span>
+            <!-- <a href="https://apps.apple.com/app/diabetesfit" class="cta-button">Download on App Store</a> -->
+        </div>
+    </header>
+    
+    <section class="features">
+        <div class="container">
+            <h2>Why DiabetesFit?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Comprehensive Tracking</h3>
+                    <p>Monitor glucose, insulin, meals, and carbohydrates with seamless HealthKit integration supporting all major CGM systems.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Interactive Education</h3>
+                    <p>Learn insulin timing and behavior through interactive visualizations based on real pharmacokinetic models.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🇨🇭</div>
+                    <h3>Swiss-Focused</h3>
+                    <p>Built for Switzerland with official BLV food database, Swiss healthcare standards, and Swiss data protection.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">💉</div>
+                    <h3>Evidence-Based Timing</h3>
+                    <p>Insulin timing guidance following FIT protocols with smart pen integration for automatic dose logging.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Complete Ecosystem</h3>
+                    <p>iPhone, iPad, Apple Watch apps with widgets for home and lock screens. Real-time sync across all devices.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>Your data stays in your Apple ecosystem. GDPR and Swiss data protection compliant. No third-party sharing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="languages">
+        <div class="container">
+            <h2>Available in 6 Languages</h2>
+            <p class="language-list">English • Deutsch • Ελληνικά • Français • Italiano • Español</p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="mailto:support@diabetesfit.ch">Contact Support</a>
+            </div>
+            <p>&copy; 2025 DiabetesFit. Made in Switzerland.</p>
+            <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">
+                DiabetesFit is a tracking tool, not a medical device. Always consult your healthcare provider before making therapy changes.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
