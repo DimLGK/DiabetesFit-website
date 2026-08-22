@@ -29,12 +29,12 @@
             max-width: 1180px; margin: 0 auto; padding: 18px var(--pad);
             display: flex; align-items: center; justify-content: space-between; gap: 16px;
         }
-        .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; color: var(--ink); padding-block: 11px; }
+        .brand { display: flex; align-items: center; gap: 11px; font-weight: 600; font-size: 21px; letter-spacing: -0.022em; color: var(--ink); padding-block: 10px; }
         .brand:hover { text-decoration: none; color: var(--ink); }
-        .brand__mark { width: 22px; height: 22px; background: var(--red); position: relative; flex: none; }
-        .brand__mark::before, .brand__mark::after { content: ""; position: absolute; background: #fff; }
-        .brand__mark::before { left: 9px; top: 4px; width: 4px; height: 14px; }
-        .brand__mark::after { left: 4px; top: 9px; width: 14px; height: 4px; }
+        /* The app's own icon — a glucose curve crossing its target band — drawn monochrome. A
+           generic Swiss cross said nothing the copy does not already say, and read as a pharmacy
+           cross as easily as a flag. */
+        .brand__mark { width: 27px; height: 27px; color: var(--red); flex: none; }
         .nav__back { font-size: 14px; color: var(--ink-2); }
         .nav__back:hover { color: var(--ink); text-decoration: none; }
 
@@ -78,7 +78,11 @@
 
 <nav class="nav">
     <div class="nav__inner">
-        <a class="brand" href="/"><span class="brand__mark" aria-hidden="true"></span>DiabetesFit</a>
+        <a class="brand" href="/"><svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect x="1" y="14" width="30" height="8" fill="currentColor" opacity="0.16"/>
+              <path d="M2 23 C 3.5 10, 6 5, 8.5 5.5 S 13 20, 15.5 24 S 19.5 16, 22.5 17 S 26.5 19.5, 30 19"
+                    fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>DiabetesFit</a>
         <a class="nav__back" href="/">← Back to DiabetesFit</a>
     </div>
 </nav>
@@ -244,7 +248,7 @@
             <p><strong>DiabetesFit</strong></p>
             <p>Educational Diabetes Management Tool</p>
             <p>© 2026 DiabetesFit. All rights reserved.</p>
-            <p>Made in Switzerland 🇨🇭</p>
+            <p>Made in Switzerland</p>
         </div>
     </div>
 </body>

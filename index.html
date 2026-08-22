@@ -77,12 +77,12 @@
             gap: 16px;
             padding-block: 18px;
         }
-        .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; color: var(--ink); padding-block: 11px; }
+        .brand { display: flex; align-items: center; gap: 11px; font-weight: 600; font-size: 21px; letter-spacing: -0.022em; color: var(--ink); padding-block: 10px; }
         .brand:hover { text-decoration: none; color: var(--ink); }
-        .brand__mark { width: 22px; height: 22px; background: var(--red); position: relative; flex: none; }
-        .brand__mark::before, .brand__mark::after { content: ""; position: absolute; background: #fff; }
-        .brand__mark::before { left: 9px; top: 4px; width: 4px; height: 14px; }
-        .brand__mark::after { left: 4px; top: 9px; width: 14px; height: 4px; }
+        /* The app's own icon — a glucose curve crossing its target band — drawn monochrome. A
+           generic Swiss cross said nothing the copy does not already say, and read as a pharmacy
+           cross as easily as a flag. */
+        .brand__mark { width: 27px; height: 27px; color: var(--red); flex: none; }
 
         .nav__links { display: flex; align-items: center; gap: clamp(14px, 3vw, 30px); font-size: 14px; }
         .nav__links a { color: var(--ink-2); }
@@ -177,12 +177,16 @@
 
 <nav class="nav">
     <div class="wrap nav__inner">
-        <a class="brand" href="/"><span class="brand__mark" aria-hidden="true"></span>DiabetesFit</a>
+        <a class="brand" href="/"><svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect x="1" y="14" width="30" height="8" fill="currentColor" opacity="0.16"/>
+              <path d="M2 23 C 3.5 10, 6 5, 8.5 5.5 S 13 20, 15.5 24 S 19.5 16, 22.5 17 S 26.5 19.5, 30 19"
+                    fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>DiabetesFit</a>
         <div class="nav__links">
             <a class="nav__hide" href="#what">What it does</a>
             <a class="nav__hide" href="#timing">Timing</a>
             <a class="nav__hide" href="#privacy">Privacy</a>
-            <a class="nav__cta" href="https://apps.apple.com/us/app/diabetesfit/id6755931128">Download</a>
+            <a class="nav__cta" href="#get">Get the app</a>
         </div>
     </div>
 </nav>
@@ -195,7 +199,7 @@
             Record glucose, carbohydrates and insulin in seconds. DiabetesFit applies the carb ratio
             and correction factor your own doctor gave you — so you stop doing division at the table.
         </p>
-        <div class="btns">
+        <div class="btns" id="get">
             <a class="btn" href="https://apps.apple.com/us/app/diabetesfit/id6755931128">Download for iPhone</a>
             <!-- Android is on Play but not publicly listed yet: the store page 404s for anyone who is
                  not an enrolled tester. Once the production rollout is live and the URL below opens in
@@ -219,7 +223,7 @@
         </div>
     </div>
     <div class="hero__shot">
-        <div class="frame"><img src="img/today.jpg" alt="The DiabetesFit daily log, showing the latest glucose reading and the day's entries." width="300"></div>
+        <div class="frame"><img src="img/today.jpg" alt="DiabetesFit on iPhone: the day's glucose, insulin and time in range." width="300"></div>
     </div>
 </header>
 
@@ -276,26 +280,36 @@
             </ul>
         </div>
         <div class="shots">
-            <img src="img/timing.jpg" alt="The meal timing explorer, showing glucose and insulin activity curves around a meal.">
-            <img src="img/basal.jpg" alt="The basal coverage explorer, showing 24-hour coverage from long-acting insulin.">
+            <img src="img/timing.jpg" alt="The timing explorer on iPhone, showing the glucose response and insulin activity around a meal.">
+            <img src="img/basal.jpg" alt="The Lantus explorer on iPhone, showing how consecutive doses build 24-hour coverage.">
         </div>
     </div>
 </section>
 
 <section class="wrap section">
-    <div class="split">
-        <div class="shots">
-            <img src="img/analytics.jpg" alt="Analytics: time in range, variability and estimated A1C.">
-            <img src="img/foods.jpg" alt="The food list, showing Swiss foods with carbohydrate values.">
+    <div class="section__head">
+        <div class="label">For the appointment</div>
+        <h2>Numbers your doctor can read.</h2>
+        <p>
+            Time in range, variability, estimated A1C and the trends behind them — then a PDF report
+            or a CSV file to take with you.
+        </p>
+    </div>
+    <div class="cols">
+        <div class="col">
+            <div class="label">PDF</div>
+            <h3>A report, not a spreadsheet</h3>
+            <p>Summary statistics, a glucose trend chart and a detailed breakdown, over whatever period you choose.</p>
         </div>
-        <div>
-            <div class="label">For the appointment</div>
-            <h2 style="font-size: clamp(26px, 3.6vw, 34px); line-height: 1.14; margin-top: 14px;">Numbers your doctor can read.</h2>
-            <p style="font-size: 16px; line-height: 1.6; color: var(--ink-2); margin-top: 14px; text-wrap: pretty;">
-                Time in range, variability, estimated A1C and the trends behind them — then a PDF
-                report or a CSV file to take with you. Your own foods and saved meals export too,
-                so the work you put in stays yours.
-            </p>
+        <div class="col">
+            <div class="label">CSV</div>
+            <h3>The raw entries</h3>
+            <p>Every reading, dose and meal as a file any spreadsheet opens.</p>
+        </div>
+        <div class="col">
+            <div class="label">Everything</div>
+            <h3>Including what you built</h3>
+            <p>Your own foods and saved meals export too — months of work stays yours, not ours.</p>
         </div>
     </div>
 </section>
@@ -347,7 +361,7 @@
 
 <footer class="wrap foot">
     <div class="foot__row">
-        <span>© 2026 DiabetesFit · Made in Switzerland 🇨🇭</span>
+        <span>© 2026 DiabetesFit · Made in Switzerland</span>
         <div class="foot__links">
             <a href="privacy.html">Privacy</a>
             <a href="terms.html">Terms</a>
