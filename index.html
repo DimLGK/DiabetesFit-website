@@ -32,6 +32,9 @@
 
         *, *::before, *::after { box-sizing: border-box; }
 
+        /* the nav is sticky, so anchored headings would otherwise land underneath it */
+        html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+
         body {
             margin: 0;
             font-family: var(--sans);
@@ -94,7 +97,14 @@
 
         /* ---- hero ---- */
         .hero { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 56px); align-items: center; padding-block: clamp(44px, 7vw, 76px) clamp(40px, 6vw, 64px); }
-        @media (max-width: 900px) { .hero { grid-template-columns: minmax(0, 1fr); } .hero__shot { order: -1; } }
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: minmax(0, 1fr); }
+            /* The headline goes first on a phone. Leading with a full-height screenshot means the
+               visitor scrolls past a picture before learning what they are looking at. */
+            .hero__shot { margin-top: 8px; }
+            .hero__shot .frame { padding: 10px; }
+            .hero__shot img { width: min(64vw, 240px); }
+        }
 
         .hero h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.03; letter-spacing: -0.032em; margin-block: 22px; text-wrap: balance; }
         .hero__lead { font-size: clamp(17px, 2vw, 19px); line-height: 1.55; color: var(--ink-2); max-width: 460px; text-wrap: pretty; }
