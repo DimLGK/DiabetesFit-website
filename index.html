@@ -64,6 +64,14 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
+        .store-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
@@ -208,7 +216,14 @@
             <div class="subtitle">Precision tracking with interactive education for confident diabetes management</div>
             <div class="swiss-badge">🇨🇭 Made in Switzerland</div>
             <br><br>
-            <a href="https://apps.apple.com/us/app/diabetesfit/id6755931128" class="cta-button">Download on App Store</a>
+            <div class="store-buttons">
+                <a href="https://apps.apple.com/us/app/diabetesfit/id6755931128" class="cta-button">Download on App Store</a>
+                <!-- Android is on Play but not publicly listed yet: the store page 404s for
+                     anyone who is not an enrolled tester. Once the production rollout is live and
+                     the URL below opens in a private window, swap this span for:
+                     <a href="https://play.google.com/store/apps/details?id=com.ldl.diabetesfit" class="cta-button">Get it on Google Play</a> -->
+                <span class="coming-soon">Android — coming soon</span>
+            </div>
         </div>
     </header>
     
@@ -219,7 +234,7 @@
                 <div class="feature">
                     <div class="feature-icon">📊</div>
                     <h3>Comprehensive Tracking</h3>
-                    <p>Monitor glucose, insulin, meals, and carbohydrates with seamless HealthKit integration supporting all major CGM systems.</p>
+                    <p>Monitor glucose, insulin, meals and carbohydrates, with readings pulled straight from your CGM through HealthKit — and Health Connect on Android when it arrives.</p>
                 </div>
                 
                 <div class="feature">
@@ -242,8 +257,8 @@
                 
                 <div class="feature">
                     <div class="feature-icon">📱</div>
-                    <h3>Complete Ecosystem</h3>
-                    <p>iPhone, iPad, Apple Watch apps with widgets for home and lock screens. Real-time sync across all devices.</p>
+                    <h3>iPhone and Android</h3>
+                    <p>On Apple devices: iPhone, iPad and Apple Watch, with home and lock screen widgets and live sync through your own iCloud. An Android version with the same tracking and the same insulin explorers is on its way.</p>
                 </div>
                 
                 <div class="feature">
